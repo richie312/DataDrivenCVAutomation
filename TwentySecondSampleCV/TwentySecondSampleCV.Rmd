@@ -8,7 +8,7 @@ profilepic: Aritra.jpg
 email: "richie.chatterjee31@gmail.com"
 github: richie312
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "A professional in the field of Machine Learning, API Development, Data Engineering and Devops with more than 9 years of experience."
+aboutme: "A professional in the field of Machine Learning, API Development, Data Engineering and Devops with more than 10 years of experience."
 output: vitae::twentyseconds
 ---
 
@@ -17,65 +17,56 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Experience
-
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences.
-
-# Education
-
-```{r}
-library(tibble)
-tribble(
-  ~ Company, ~ Year, ~ Skills, ~ Description,
-  "Larsen & Toubro Infotech(S&P Global)", "2020-2021", "DataEngineering", "Planned, designed and implemented automated framework which takes json template as an input and applies transformation on dataset to generate the report in json which finally feeds the predefined tableau dashboard.",
-  "CapitalNumbers Infotech", "2019-2020", "APIDevelopment", "Implemented Online Compiler for 14 different languages for inhouse project using sphere engine api, url creation (flask). Proper API Documentation(click on this link) using Rmarkdown/Swagger framework.",
-  "GSPANN Technologies", "2019", "AWS|DataEngineering", "Build Data Pipeline for Google Analytics for client web application. Aws automation using boto3 with Python.",
-  "Colt India Pvt. Ltd","2018", "R|MachineLearning", "Consulted the company on Customer Churn management in their network lease line connection business. Find out the main reasons for churn from multiple data source. Find out the spread of maximum churn location wise (Visual, network graph and leaflet). The work was confined to Descriptive and Predictive Analytics. Prescriptive Analytics was out of scope.",
-  "Accenture India", "2012-2017","R|Python|ML|NLP", "Worked on Variour Projects associated with NLP, ML.Shiny Application Development.Flask Application Development.",
-  "IBM GPS India","2011-2012", "ITIL", "Manage the infrastructure support team, multiple vendors, and Client. Delivery of agreed services to the client by utilizing Resource and Capabilities at an optimal level to maintain the ITIL standard aligned with Client requirement."
-) %>% 
-  detailed_entries( Company, Year, Skills, Description)
-```
-
 # Domain wise skill set
 
 ```{r}
 library(tibble)
 tribble(
   ~Domain, ~Skill,
-  "Languages", "Python , R, Javascript, Markdown,Rmarkdown, Confluence Markup.",
-  "Database", "SQL, MySQL and PostgreSQL, Teradata."
+  "Languages", "Python,R,Javascript,HTML,Markdown.",
+  "Database", "SQL,MySQL,PostgreSQL,Teradata.",
+  "WebApplicationFramework", "Flask|Swagger(Python|API Dev).",
+  "Cloud",  "Glue,EC2,S3,ECS,ECR,SNS,lambda,CloudWatch,Kafka",
+  "Devops", "Jenkins,Docker,Openshift, Kubernetes.",
+  "Orchestrator", "Databricks, Airflow"
 ) %>% 
-  brief_entries(
-    Domain,Skill
+  detailed_entries(
+    Domain,
+    Skill
   )
 ```
 
-# Personal Projects
+# Experience
 
 ```{r}
 library(tibble)
 tribble(
-  ~Project, ~Url,
-  "JenkinsPipeline","http://jenkins-applyjob.nirvikalpa-projects.com:8080/",
-  "API", "http://jenkins-applyjob.nirvikalpa-projects.com:8080/",
-  "APIDocs","http://api.nirvikalpa-projects.com/docs",
-  "ML Plaform", "",
-  "Weather Application", ""
+  ~ Company, ~ Year, ~ Skills, ~ Description,
+  "Accenture", "2022- Present","DataEngineering & Work Automation","Cobol to python migration, scheduling jobs using databricks. Work Automation using pipeline to update the databricks json, gcs bucket and other infrastructure related documents for end 2 end executuion of pipeine. Use of yml files to write CI|CD pipelines.",
+  
+  "Accenture", "2021- Present","DataEngineering","Sas to Python Migration,IRB Document Integration using python, Data Modelling & Dataquality using pyspark. AWS Lambda Deployment, Jenkins Pipeline, AWS Route 53, Spark Transformations along with Kafka|AWS Kinesis.",
+  "Larsen & Toubro Infotech(S&P Global)", "2020-2021", "DataEngineering", "Planned, designed and implemented automated framework which takes json template as an input and applies spark transformation on dataset to generate the report in json which finally feeds the predefined tableau dashboard.",
+  "CapitalNumbers Infotech", "2019-2020", "APIDevelopment", "Implemented Online Compiler for 14 different languages using sphere engine api, api creation (flask).",
+  "GSPANN Technologies", "2019", "AWS|DataEngineering", "Build Data Pipeline for Google Analytics for client web application. Aws automation using boto3 with Python.",
+  "Colt India Pvt. Ltd","2018", "R|MachineLearning", "Customer Churn management. Visualisation using leaflet and network graph.",
+  "Accenture India", "2012-2017","R|Python|ML|NLP", "Data Science",
+  "IBM GPS India","2011-2012", "ITIL", "Incident, Change and Problem Management."
 ) %>% 
-  brief_entries(
-    Project, 
-    Url
-  )
+  detailed_entries( Company, Year, Skills, Description)
 ```
+
+# Education
 
 ```{r}
-library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "packages.bib")
-
-bibliography_entries("packages.bib") %>%
-  arrange(desc(author$family), issued)
+library(tibble)
+tribble(
+  ~Degree,~Subject,~Year,~Institution,
+  "Secondary","Standard", "2001","KV2 Kalaikunda,WB",
+  "HigherSecondary","PCMB", "2003","KV1 SaltLake,Kolkata",
+  "Graduation","Economics(Honors) Maths,Stats","2006","Siliguri College, WB",
+  "PostGraduation","Marketing|MIS", "2009","GBS,Kolkata"
+) %>% 
+  detailed_entries(
+   Degree,Subject,Year,Institution
+  )
 ```
-
