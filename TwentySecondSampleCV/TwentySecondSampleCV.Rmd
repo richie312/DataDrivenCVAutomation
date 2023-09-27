@@ -1,14 +1,14 @@
 ---
 name: "Aritra"
 surname: "Chatterjee"
-position: "Sr.DataEngineering Analyst"
+position: "Sr.Software Engineer"
 address: "Flat 403, Udaya Abhi's Residency, Kondapur, Hyderabad."
 phone: +91 8017781327
-profilepic: Aritra.jpg
+profilepic: Aritra.jpeg
 email: "richie.chatterjee31@gmail.com"
 github: richie312
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "A professional in the field of Machine Learning, API Development, Data Engineering and Devops with more than 10 years of experience."
+aboutme: "A professional in the field of Machine Learning, API Development, Data Engineering and Devops with a decade of experience."
 output: vitae::twentyseconds
 ---
 
@@ -26,9 +26,10 @@ tribble(
   "Languages", "Python,R,Javascript,HTML,Markdown.",
   "Database", "SQL,MySQL,PostgreSQL,Teradata.",
   "WebApplicationFramework", "Flask|Swagger(Python|API Dev).",
-  "Cloud",  "Glue,EC2,S3,ECS,ECR,SNS,lambda,CloudWatch,Kafka",
+  "Cloud",  "AWS, GCP",
   "Devops", "Jenkins,Docker,Openshift, Kubernetes.",
-  "Orchestrator", "Databricks, Airflow"
+  "Orchestrator", "Databricks, Airflow",
+  "Data Transform Libs", "Pandas, Pyspark",
 ) %>% 
   detailed_entries(
     Domain,
